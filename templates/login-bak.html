@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<style>
+    .page-header {
+        width: 960px;
+        height: 720px;
+        border: 1px solid;
+        margin: auto;
+        margin-top: 3%
+    }
+
+    .center_parent {
+        width: 960px;
+        height: 500px;
+        border: 1px solid;
+        margin: auto;
+    }
+
+    .center_child {
+        width: 478px;
+        height: 498px;
+        border: 1px solid;
+        float: left;
+        text-align: center;
+    }
+
+    .page_footer {
+        margin: auto;
+        text-align: center;
+        line-height: 100px
+    }
+
+    .center_div_left {
+        float: left;
+        width: 30%;
+        height: 48px;
+        text-align: right;
+        line-height: 48px;
+        font-size: 20px;
+        font-family: 微软雅黑;
+    }
+
+    .center_div_right {
+        float: left;
+        width: 69%;
+        height: 48px;
+        text-align: left;
+        line-height: 48px;
+        font-size: 20px;
+    }
+
+    .center_right_bottom {
+        background-color: aquamarine;
+        height: 48px;
+        width: 90px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        line-height: 48px;
+        font-size: 20px;
+    }
+
+    input {
+        height: 30px;
+        width: 240px;
+        font-size: 20px;
+    }
+
+    checkbox_input {
+        height: 10px;
+        width: 10px;
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+<div class="page-header">
+    <div>
+        <a href="http://www.baidu.com">
+            <img src="http://www.baidu.com/img/bd_logo1.png" alt="链接到百度" title="百度链接"
+                 width="270" height="129">
+        </a>
+    </div>
+    <div class="center_parent">
+        <div class="center_child">
+            <img src="http://pic.qiantucdn.com//58pic//15%2F51%2F87%2F12F58PIC5S2_1024.png"
+                 style="width:400px;height: 400px; margin-top:10%" title="欢迎加入">
+        </div>
+        <div class="center_child" style="position: relative">
+
+            <form action="/login/" method="post">
+                <div style="margin-top:20%;">
+                    <div class="center_div_left">
+                        <label for="username">用户名：</label>
+
+                    </div>
+                    <div class="center_div_right">
+                        <input type="text" id="username" name="username"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="center_div_left">
+                        <label for="password">密码：</label>
+
+                    </div>
+                    <div class="center_div_right">
+                        <input type="password" id="password" name="password"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="center_div_left">
+                        <label for="name">验证码：</label>
+                    </div>
+                    <div class="center_div_right">
+                        <input type="verification_code" name="verification_code" id="verification_code"
+                               style="width:120px">
+                        <img src="1.ico"
+                             style="width:118px;height: 36px;position: absolute;margin-top: 7px;margin-left: 1px;">
+                    </div>
+                </div>
+                <div>
+                    <div class="center_div_left">
+                    </div>
+                    <div class="center_div_right">
+                        <input type="checkbox" name="auto_login" value="auto_login" style="height: auto;width: auto;">自动登录
+                        <a href="http://www.baidu.com">忘记密码？</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="center_div_left">
+                    </div>
+                    <div class="center_div_right" style="text-align: center;width: 52%">
+                        <input type="submit" value="登  录" style="background-color: red;border: 0">
+                        <span style="color: red">{{ message }}</span>
+                    </div>
+                </div>
+            </form>
+            <div class="center_right_bottom">
+                <a href="http://www.baidu.com">免费注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <a href="http://www.baidu.com">@made by tryagaintry</a>
+    </div>
+</div>
+<script src="/static/jquery.min.js"></script>
+</body>
+</html>

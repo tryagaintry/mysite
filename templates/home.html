@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style>
+        table,tr,td{
+            border: solid 1px black;
+        }
+        thead{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<form action="/home/" method="post">
+    <input type="text" name="username" placeholder="用户名">
+    <input type="text" name="sexual" placeholder="性别">
+    <input type="text" name="email" placeholder="邮箱">
+    <input type="submit" value="添加">
+</form>
+<table>
+    <thead>
+    <tr>
+        <td>用户名</td>
+        <td>性别</td>
+        <td>邮箱</td>
+    </tr>
+    </thead>
+    <tbody>
+{#    <tr>#}
+{#        <td>张三</td>#}
+{#        <td>男</td>#}
+{#        <td>111@111.com</td>#}
+{#    </tr>#}
+{#        <tr>#}
+{#        <td>李四</td>#}
+{#        <td>男</td>#}
+{#        <td>222@222.com</td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#        <td>王五</td>#}
+{#        <td>男</td>#}
+{#        <td>333@333.com</td>#}
+{#    </tr>#}
+    {%  for row in user_list %}
+        <tr>
+            <td>{{ row.username }}</td>
+            <td>{{ row.sexual }}</td>
+            <td>{{ row.email }}</td>
+        </tr>
+    {%  endfor %}
+    </tbody>
+    <tr>
+    </tr>
+</table>
+</body>
+</html>
